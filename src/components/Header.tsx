@@ -18,7 +18,7 @@ export function Header() {
   return (
     <header className="bg-slate-950 sticky inset-x-0 top-0 z-50">
       <nav
-        className="flex items-center justify-between px-10 py-6 xl:px-16 xl:py-4 2xl:px-24"
+        className="flex items-center justify-between py-6"
         aria-label="Global"
       >
         <div className="flex">
@@ -42,7 +42,7 @@ export function Header() {
           >
             <span className="sr-only">Open main menu</span>
             <Menu
-              className="h-6 w-6 transition duration-100 hover:text-purple-800"
+              className="h-6 w-6 transition duration-100 hover:text-sky-800"
               aria-hidden="true"
             />
           </button>
@@ -52,7 +52,7 @@ export function Header() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-zinc-800 hover:text-purple-800 lg:text-base"
+              className="text-sm font-semibold leading-6 text-zinc-100 border-b-2 border-b-transparent transition duration-200 hover:border-b-sky-800 lg:text-base"
             >
               {item.name}
             </a>
@@ -86,7 +86,7 @@ export function Header() {
             >
               <span className="sr-only">Close menu</span>
               <X
-                className="h-6 w-6 transition duration-100 hover:text-purple-800"
+                className="h-6 w-6 transition duration-100 hover:text-sky-800"
                 aria-hidden="true"
               />
             </button>
@@ -95,13 +95,14 @@ export function Header() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6 mt-4">
                 {navItems.map((item) => (
-                  <button
-                    key={item.name}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-zinc-100 transition duration-100 hover:text-purple-800"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <a href={item.href}>{item.name}</a>
-                  </button>
+                  <a href={item.href} key={item.name}>
+                    <button
+                      className="-mx-3 block px-3 py-2 w-24 text-start text-base font-semibold leading-7 text-zinc-100 transition duration-200 hover:text-sky-800"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </button>
+                  </a>
                 ))}
               </div>
             </div>
@@ -109,81 +110,5 @@ export function Header() {
         </Dialog.Panel>
       </Dialog>
     </header>
-    // <div className="bg-slate-950 sticky inset-x-0 top-0 z-50">
-    //   <div className="flex items-center justify-between md:justify-normal md:gap-16">
-    //     <div className="flex items-center gap-2">
-    //       <Image
-    //         alt=""
-    //         src={gponteIcon}
-    //         width={1000}
-    //         height={1000}
-    //         quality={100}
-    //         className="rounded-lg w-12 h-12"
-    //       />
-    //     </div>
-    //     <nav aria-hidden="true" className="hidden md:flex">
-    //       <div className="md:flex md:items-center md:gap-16">
-    //         {navItems.map((item) => {
-    //           return (
-    //             <button
-    //               key={item.name}
-    //               className="md:text-sm md:font-semibold text-zinc-100 underline decoration-4 decoration-transparent decoration hover:decoration-slate-600 transition duration-200 cursor-pointer"
-    //             >
-    //               <a href={item.href}>{item.name}</a>
-    //             </button>
-    //           )
-    //         })}
-    //       </div>
-    //     </nav>
-
-    //     <Dialog.Root open={menuOpen}>
-    //       <Dialog.Trigger
-    //         onClick={() => setMenuOpen(!menuOpen)}
-    //         className="md:hidden"
-    //       >
-    //         <Menu className="text-zinc-100" />
-    //       </Dialog.Trigger>
-    //       <Dialog.Portal>
-    //         <Dialog.Overlay className="bg-slate-950 fixed inset-0">
-    //           <Dialog.Content className="p-10">
-    //             <div className="flex items-center justify-between">
-    //               <div className="flex items-center gap-2">
-    //                 <Image
-    //                   alt=""
-    //                   src={gponteIcon}
-    //                   width={1000}
-    //                   height={1000}
-    //                   quality={100}
-    //                   className="rounded-lg w-12 h-12"
-    //                 />
-    //               </div>
-    //               <Dialog.Close
-    //                 onClick={() => setMenuOpen(!menuOpen)}
-    //                 className="md:hidden"
-    //               >
-    //                 <X className="text-zinc-100" />
-    //               </Dialog.Close>
-    //             </div>
-    //             <nav className="flex mt-10">
-    //               <div className="flex flex-col items-start gap-4 text-md font-semibold">
-    //                 {navItems.map((item) => {
-    //                   return (
-    //                     <button
-    //                       key={item.name}
-    //                       className="md:text-sm md:font-semibold text-zinc-100 underline decoration-4 decoration-transparent decoration hover:decoration-slate-600 transition duration-200 cursor-pointer"
-    //                       onClick={() => setMenuOpen(!menuOpen)}
-    //                     >
-    //                       <a href={item.href}>{item.name}</a>
-    //                     </button>
-    //                   )
-    //                 })}
-    //               </div>
-    //             </nav>
-    //           </Dialog.Content>
-    //         </Dialog.Overlay>
-    //       </Dialog.Portal>
-    //     </Dialog.Root>
-    //   </div>
-    // </div>
   )
 }
