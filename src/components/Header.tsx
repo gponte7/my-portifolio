@@ -7,7 +7,7 @@ import gponteIcon from '../../public/gponte.jpg'
 import { Dialog } from '@headlessui/react'
 
 const navItems = [
-  { name: 'Home', href: '#home' },
+  { name: 'Home', href: '#' },
   { name: 'Skills', href: '#skills' },
   { name: 'Contato', href: '#contact' },
 ]
@@ -16,7 +16,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-slate-950 sticky inset-x-0 top-0 z-50">
+    <header className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 sticky inset-x-0 top-0 z-50 px-10 2xl:px-80">
       <nav
         className="flex items-center justify-between py-6"
         aria-label="Global"
@@ -66,7 +66,7 @@ export function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-slate-950 px-10 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 px-10 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#">
               <span className="sr-only">Guilherme Ponte</span>

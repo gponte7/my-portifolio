@@ -2,7 +2,9 @@ import { EnvelopeSimple } from '@phosphor-icons/react/dist/ssr/EnvelopeSimple'
 import { GithubLogo } from '@phosphor-icons/react/dist/ssr/GithubLogo'
 import { InstagramLogo } from '@phosphor-icons/react/dist/ssr/InstagramLogo'
 import { LinkedinLogo } from '@phosphor-icons/react/dist/ssr/LinkedinLogo'
+import { Users } from '@phosphor-icons/react/dist/ssr/Users'
 import { WhatsappLogo } from '@phosphor-icons/react/dist/ssr/WhatsappLogo'
+import Image from 'next/image'
 
 const footerTopics = [
   {
@@ -18,12 +20,11 @@ const footerTopics = [
 export default function Footer() {
   return (
     <footer className="bg-zinc-800 py-10 lg:py-10 text-zinc-100" id="contact">
-      <div className="flex flex-col justify-between gap-10">
-        <div>
-          <h1 className="text-3xl font-bold text-center">Contato</h1>
-        </div>
-
-        <div className="grid grid-cols-1 gap-10 items-start">
+      <div>
+        <h1 className="text-3xl font-bold text-center mb-10">Contato</h1>
+      </div>
+      <div className="flex flex-col justify-between gap-10 lg:grid lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-10 items-start mb-6 lg:order-2 lg:mb-0 lg:place-content-between">
           {footerTopics.map((topic) => {
             return (
               <div
@@ -45,12 +46,17 @@ export default function Footer() {
                   {topic.title === 'Email' ? (
                     <a
                       href="mailto:guilhermescponte@hotmail.com"
+                      title="Enviar Email"
                       target="_blank"
                     >
                       {topic.link}
                     </a>
                   ) : (
-                    <a href="https://wa.me/5524992078862" target="_blank">
+                    <a
+                      href="https://wa.me/5524992078862"
+                      title="Enviar Whatsapp"
+                      target="_blank"
+                    >
                       {topic.link}
                     </a>
                   )}
@@ -59,37 +65,60 @@ export default function Footer() {
             )
           })}
         </div>
-        <div className="flex items-center justify-center gap-6">
-          <button>
-            <a
-              href="https://www.linkedin.com/in/guilhermeponte7/"
-              target="_blank"
-            >
-              <LinkedinLogo
-                size={36}
-                weight="fill"
-                className="hover:text-zinc-300 transition duration-100 cursor-pointer"
-              />
-            </a>
-          </button>
-          <button>
-            <a href="https://github.com/gponte7" target="_blank">
-              <GithubLogo
-                size={36}
-                weight="fill"
-                className="hover:text-zinc-300 transition duration-100 cursor-pointer"
-              />
-            </a>
-          </button>
+        <div className="flex flex-col items-center justify-center gap-6">
+          <div className="flex items-center  gap-2">
+            <Users size={22} />
+            <h3 className="font-extrabold">Redes Sociais</h3>
+          </div>
+          <Image
+            alt=""
+            src="https://github.com/gponte7.png"
+            width={412}
+            height={412}
+            quality={100}
+            className="rounded-full border-2 border-zinc-100 p-1 w-36"
+          />
+          <div className="flex items-center justify-center gap-6">
+            <button>
+              <a
+                href="https://www.linkedin.com/in/guilhermeponte7/"
+                title="LinkedIn"
+                target="_blank"
+              >
+                <LinkedinLogo
+                  size={36}
+                  weight="fill"
+                  className="hover:text-zinc-300 transition duration-100 cursor-pointer"
+                />
+              </a>
+            </button>
+            <button>
+              <a
+                href="https://github.com/gponte7"
+                title="Github"
+                target="_blank"
+              >
+                <GithubLogo
+                  size={36}
+                  weight="fill"
+                  className="hover:text-zinc-300 transition duration-100 cursor-pointer"
+                />
+              </a>
+            </button>
 
-          <button>
-            <a href="https://www.instagram.com/gponte7/" target="_blank">
-              <InstagramLogo
-                size={36}
-                className="hover:text-zinc-300 transition duration-100 cursor-pointer"
-              />
-            </a>
-          </button>
+            <button>
+              <a
+                href="https://www.instagram.com/gponte7/"
+                title="Instagram"
+                target="_blank"
+              >
+                <InstagramLogo
+                  size={36}
+                  className="hover:text-zinc-300 transition duration-100 cursor-pointer"
+                />
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </footer>

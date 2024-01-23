@@ -16,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.className} scroll-smooth`}>
-      <body className="bg-slate-950 text-zinc-100 antialiased">{children}</body>
+      <body className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-zinc-100 antialiased">
+        {children}
+      </body>
     </html>
   )
 }

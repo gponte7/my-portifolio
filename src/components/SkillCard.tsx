@@ -8,11 +8,7 @@ interface StatisticsCardProps {
 export function SkillCard({ imageSource, title }: StatisticsCardProps) {
   return (
     <div className="flex flex-col lg:w-52 lg:h-52 items-center justify-center gap-4">
-      {title === 'Tailwind CSS' ? (
-        <h3 className="text-base uppercase">{title}</h3>
-      ) : (
-        <h3 className="text-base uppercase">{title}</h3>
-      )}
+      <h3 className="text-base uppercase">{title}</h3>
       {title === 'Next JS' ? (
         <Image
           src={imageSource}

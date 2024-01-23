@@ -39,11 +39,8 @@ const skills = [
 export default function Home() {
   return (
     <>
-      <div
-        id="home"
-        className="mx-auto min-h-screen w-full max-w-[1366px] px-10"
-      >
-        <Header />
+      <Header />
+      <div id="#" className="mx-auto min-h-screen w-full max-w-[1366px] px-10">
         <Hero />
         <div className="pt-24 pb-20 2xl:min-h-screen" id="skills">
           <div className="flex items-start justify-center gap-2">
