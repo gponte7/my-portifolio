@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer'
 import { Header } from '@/components/Header'
 import Hero from '@/components/Hero'
+import Projects from '@/components/Projects'
 import { SkillCard } from '@/components/SkillCard'
 import { CodeSimple } from '@phosphor-icons/react/dist/ssr/CodeSimple'
 
@@ -62,6 +63,9 @@ export default function Home() {
               )
             })}
           </div>
+        </div>
+        <div id="projetos">
+          <Projects />
         </div>
       </div>
       <Footer />

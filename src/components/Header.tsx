@@ -9,6 +9,7 @@ import { Dialog } from '@headlessui/react'
 const navItems = [
   { name: 'Home', href: '#' },
   { name: 'Skills', href: '#skills' },
+  { name: 'Projetos', href: '#projetos' },
   { name: 'Contato', href: '#contact' },
 ]
 
