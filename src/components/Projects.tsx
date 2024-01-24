@@ -3,7 +3,7 @@ import { ProjectCard } from './ProjectCard'
 
 const projects = [
   {
-    imageSource: '/spotify-app.png',
+    imageSource: '/spotify.png',
     title: 'Spotify Search',
     description:
       'Utilize o Spotify Search para buscar os álbuns de seus artistas favoritos e abrí-los diretamente em seu spotify!',
