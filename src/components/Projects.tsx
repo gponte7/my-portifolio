@@ -41,7 +41,7 @@ export default function Projects() {
       <div className="grid grid-cols-1 lg:grid-cols-3 place-items-center gap-14 mt-16">
         {projects.map((project) => {
           return (
-            <div key={project.title}>
+            <div key={project.title} className="w-11/12 2xl:w-full">
               <ProjectCard
                 imageSource={project.imageSource}
                 title={project.title}

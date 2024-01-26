@@ -14,7 +14,7 @@ export function ProjectCard({
   link,
 }: ProjectsProps) {
   return (
-    <div className="h-[410px] lg:h-[500px] flex flex-col items-center justify-between gap-4 p-6 border-2 border-zinc-500 rounded-tl-3xl rounded-br-3xl shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] shadow-slate-900">
+    <div className="h-[410px] lg:h-[450px] 2xl:h-[500px] flex flex-col items-center justify-between gap-4 p-6 border-2 border-zinc-500 rounded-tl-3xl rounded-br-3xl shadow-[-10px_-10px_30px_4px_rgba(0,0,0,0.1),_10px_10px_30px_4px_rgba(45,78,255,0.15)] shadow-slate-900">
       <div className="flex flex-col items-center gap-6">
         <div className="w-full lg:h-44">
           <Image
