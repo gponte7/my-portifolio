@@ -6,8 +6,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://guilherme-ponte.vercel.app/'),
-  title: 'Guilherme Ponte',
-  description: 'Guilherme Ponte portifolio page',
+  title: 'Guilherme Ponte | Frontend Developer',
   openGraph: {
     images: '/gponte.jpg',
   },
